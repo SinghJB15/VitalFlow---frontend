@@ -16,7 +16,7 @@ const Main = (props) => {
   const [userHeartrate, setUserHeartrate] = useState(null);
   const [userEcg, setUserEcg] = useState(null);
   const [userActivities, setUserActivities] = useState(null);
-  const URL = "http://localhost:4000/";
+  const URL = process.env.REACT_APP_BACKEND_URL;
 
   //Function to fetch user profile
   const fetchData = async() => {

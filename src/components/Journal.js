@@ -7,7 +7,7 @@ import EditJournal from "../pages/JournalEdit";
 
 const Journal = (props) => {
     const navigate = useNavigate();
-    const URL = "http://localhost:4000/journal/"
+    const URL = `${process.env.REACT_APP_BACKEND_URL}journal/`;
     const [journals, setJournals] = useState(null);
     //Function to fetch journals
     const fetchJournals = async() => {

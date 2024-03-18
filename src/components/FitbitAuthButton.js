@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 
 const FitbitAuthButton = () => {
     const navigate = useNavigate()
-    const URL = "http://localhost:4000/";
+    const URL = process.env.REACT_APP_BACKEND_URL;
 
     const getAuthUrlAndRedirect = async() => {
         try {

@@ -6,7 +6,7 @@ import RegisterForm from "../pages/userRegister";
 
 const Auth = (props) => {
     const navigate = useNavigate();
-    const URL = "http://localhost:4000/";
+    const URL = process.env.REACT_APP_BACKEND_URL;
 
     // Function for existing users to login
     const login = async (username, password) => {

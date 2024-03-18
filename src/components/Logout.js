@@ -4,7 +4,7 @@ import axios from "axios";
 
 //Function for users to logout
 const Logout = (props) => {
-  const URL = "http://localhost:4000/";
+  const URL = process.env.REACT_APP_BACKEND_URL;
   const navigate = useNavigate();
 
   const logoutUser = async () => {
