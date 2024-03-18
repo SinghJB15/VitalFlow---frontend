@@ -5,7 +5,8 @@ import { useParams } from 'react-router-dom';
 //New Journal Componenet
 const EditJournal = ( { journals, updateJournal }) => {
     //Get Journal id from url
-    const { id } = useParams();
+    const params = useParams();
+    const id = params.id;
 
     //Find the journal to edit based on the id
     const journalToEdit = journals.find(journal => journal._id === id);
@@ -14,15 +15,17 @@ const EditJournal = ( { journals, updateJournal }) => {
     //Function to handle form submission
     const handleSubmit = async(e) => {
         e.preventDefault();
-        updateJournal(journalData, journalToEdit._id)
+        updateJournal(journalData, journalToEdit._id);
     }
 
     //Function to handle user input changes
     const handleInputChange = async(e) => {
-        setJournalData({...journalData, [e.target.name]: e.target.value})
+        setJournalData({...journalData, [e.target.name]: e.target.value});
+        console.log(journalData);
     };
 
     return (
+      <div className="RegisterStyle" style={{ marginLeft: "300px", width: "500px", margin: "20px auto", padding: "20px" }}>
         <form onSubmit={handleSubmit}>
           <label htmlFor="date">Date:</label>
           <input
@@ -61,6 +64,7 @@ const EditJournal = ( { journals, updateJournal }) => {
           />
           <button type="submit">Update Journal</button>
         </form>
+        </div>
       );
     
 }

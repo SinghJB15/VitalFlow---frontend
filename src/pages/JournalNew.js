@@ -30,6 +30,7 @@ const NewJournal = ({ createJournal }) => {
 
   return (
     <div className="RegisterStyle" style={{ marginLeft: "300px", width: "500px", margin: "20px auto", padding: "20px" }}>
+       <h2 className="center-align">Add Journal</h2>
     <form onSubmit={handleSubmit}>
       <label htmlFor="date">Date:</label>
       <input

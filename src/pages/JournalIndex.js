@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const JournalIndex = ({ journals, deleteJournal }) => {
   return (
     <div className="container" style={{ marginLeft: "300px", width: "500px", margin: "20px auto", padding: "20px" }}>
+         <h2 className="center-align">View Journals</h2>
       <div className="row">
         {journals && journals.length > 0 ? (
           journals.map((journal) => (

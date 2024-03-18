@@ -52,6 +52,9 @@ const Journal = (props) => {
     const deleteJournal = async(journalId) => {
         try {
             const response = await axios.delete(URL + journalId, { withCredentials: true });
+            if(response.status === 200) {
+                fetchJournals();
+            }
 
         } catch(error) {
             console.error("Failed to delete Journal", error);
